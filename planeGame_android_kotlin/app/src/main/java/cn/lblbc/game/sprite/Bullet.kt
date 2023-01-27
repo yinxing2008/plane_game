@@ -4,14 +4,12 @@
  * 包含：Java | 安卓 | 前端 | Flutter | iOS | 小程序 | 鸿蒙
  * 公众号：蓝不蓝编程
  */
-package cn.lblbc.game.sprite;
+package cn.lblbc.game.sprite
 
-import android.graphics.Bitmap;
+import android.graphics.Bitmap
 
-public class Bullet extends AutoSprite {
-
-    public Bullet(Bitmap bitmap) {
-        super(bitmap);
-        setSpeed(-10);//负数表示子弹向上飞
+class Bullet(bitmap: Bitmap) : AutoSprite(bitmap) {
+    init {
+        setSpeed(-10F) //负数表示子弹向上飞
     }
 }
