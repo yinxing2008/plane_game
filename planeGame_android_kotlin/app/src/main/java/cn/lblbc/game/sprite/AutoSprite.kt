@@ -33,7 +33,7 @@ open class AutoSprite(bitmap: Bitmap) : Sprite(bitmap) {
     private fun checkOffScreen(canvas: Canvas) {
         val canvasRecF = RectF(0F, 0F, canvas.width.toFloat(), canvas.height.toFloat())
         val spriteRecF = rectF
-        if (!RectF.intersects(canvasRecF, spriteRecF!!)) {
+        if (!RectF.intersects(canvasRecF, spriteRecF)) {
             hide()
         }
     }

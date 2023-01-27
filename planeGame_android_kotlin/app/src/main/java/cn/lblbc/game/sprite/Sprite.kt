@@ -87,9 +87,9 @@ open class Sprite(val bitmap: Bitmap) {
     }
 
     open val width: Float
-        get() = bitmap!!.width.toFloat()
+        get() = bitmap.width.toFloat()
     val height: Float
-        get() = bitmap!!.height.toFloat()
+        get() = bitmap.height.toFloat()
 
     fun show() {
         isVisible = true

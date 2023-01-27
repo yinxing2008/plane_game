@@ -19,6 +19,9 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
     private lateinit var myPlane: Sprite
     private val gameOverView: GameOverView
     val density = resources.displayMetrics.density //屏幕密度
+    private val STATUS_GAME_NOT_STARTED = 0 //游戏未开始
+    private val STATUS_GAME_STARTED = 1 //游戏开始
+    private val STATUS_GAME_OVER = 2 //游戏结束
     private var status = STATUS_GAME_NOT_STARTED
     private var touchX = -1f //触点的x坐标
     private var touchY = -1f //触点的y坐标
@@ -61,7 +64,7 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
         if (frame == 0L) {
             val centerX = (canvas.width / 2).toFloat()
             val centerY = canvas.height - myPlane.height / 2
-            myPlane!!.moveToByCenter(centerX, centerY)
+            myPlane.moveToByCenter(centerX, centerY)
         }
 
         //在绘制之前先移除掉已经被destroyed的Sprite
@@ -74,7 +77,7 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
 
         //遍历sprites，绘制战机、子弹、爆炸效果
         val sprites = SpriteManager.getSprites()
-        for (sprite in sprites!!) {
+        for (sprite in sprites) {
             sprite!!.draw(canvas, mPaint, this)
         }
 
@@ -82,7 +85,7 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
         checkCollision()
 
         //如果我方战机被击中，游戏结束
-        if (!myPlane!!.isVisible) {
+        if (!myPlane.isVisible) {
             status = STATUS_GAME_OVER
         }
 
@@ -110,8 +113,8 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
             }
         }
         for (enemyPlane in enemies) {
-            if (enemyPlane.isVisible && myPlane!!.isCollidePointWithOther(enemyPlane)) {
-                myPlane!!.hide()
+            if (enemyPlane.isVisible && myPlane.isCollidePointWithOther(enemyPlane)) {
+                myPlane.hide()
                 break
             }
         }
@@ -143,9 +146,4 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
         postInvalidate()
     }
 
-    companion object {
-        const val STATUS_GAME_NOT_STARTED = 0 //游戏未开始
-        const val STATUS_GAME_STARTED = 1 //游戏开始
-        const val STATUS_GAME_OVER = 2 //游戏结束
-    }
 }

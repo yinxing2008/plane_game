@@ -6,25 +6,11 @@
  */
 package cn.lblbc.game.sprite
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import cn.lblbc.game.R
-import android.content.Intent
-import android.graphics.*
-import cn.lblbc.game.activity.GameActivity
-import cn.lblbc.game.sprite.AutoSprite
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Rect
 import cn.lblbc.game.GameView
-import cn.lblbc.game.sprite.Sprite
-import cn.lblbc.game.SpriteManager
-import cn.lblbc.game.BitMapReader
-import android.text.TextPaint
-import android.graphics.Paint.Align
-import cn.lblbc.game.GameOverView
-import android.view.MotionEvent
-import cn.lblbc.game.sprite.MyPlane
-import cn.lblbc.game.sprite.EnemyPlane
-import cn.lblbc.game.sprite.Explosion
-import cn.lblbc.game.sprite.Bullet
 
 /**
  * 爆炸效果类，位置不变，但是可以显示动态的爆炸效果

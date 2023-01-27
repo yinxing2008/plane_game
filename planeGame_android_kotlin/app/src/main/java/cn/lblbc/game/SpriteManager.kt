@@ -10,8 +10,8 @@ import android.content.Context
 import cn.lblbc.game.sprite.*
 
 object SpriteManager {
-    private val sprites: MutableList<Sprite?> = ArrayList() //存放所有战机、子弹、爆炸对象
-    private val spritesToBeAdded: MutableList<Sprite?> = ArrayList() //待加入sprites的临时队列
+    private val sprites: MutableList<Sprite> = ArrayList() //存放所有战机、子弹、爆炸对象
+    private val spritesToBeAdded: MutableList<Sprite> = ArrayList() //待加入sprites的临时队列
     private val enemyPlanePool: MutableList<Sprite> = ArrayList() //敌机对象池
     private val explosionPool: MutableList<Sprite> = ArrayList() //爆炸对象池
     private val bulletPool: MutableList<Sprite> = ArrayList() //子弹对象池
@@ -53,8 +53,8 @@ object SpriteManager {
         }
     }
 
-    fun getEnemyPlane(canvasWidth: Int): Sprite? {
-        return if (!enemyPlanePool.isEmpty()) {
+    private fun getEnemyPlane(canvasWidth: Int): Sprite? {
+        return if (enemyPlanePool.isNotEmpty()) {
             val sprite = enemyPlanePool.removeAt(0)
             val spriteWidth = sprite.width
             val spriteHeight = sprite.height
@@ -82,8 +82,8 @@ object SpriteManager {
         }
     }
 
-    fun getExplosion(centerX: Float, centerY: Float): Sprite? {
-        return if (!explosionPool.isEmpty()) {
+    private fun getExplosion(centerX: Float, centerY: Float): Sprite? {
+        return if (explosionPool.isNotEmpty()) {
             val sprite = explosionPool.removeAt(0)
             sprite.moveToByCenter(centerX, centerY)
             sprite
@@ -92,8 +92,8 @@ object SpriteManager {
         }
     }
 
-    fun getBullet(x: Float, y: Float): Sprite? {
-        return if (!bulletPool.isEmpty()) {
+    private fun getBullet(x: Float, y: Float): Sprite? {
+        return if (bulletPool.isNotEmpty()) {
             val sprite = bulletPool.removeAt(0)
             sprite.moveTo(x, y)
             sprite
@@ -139,15 +139,13 @@ object SpriteManager {
         val iterator = sprites.iterator()
         while (iterator.hasNext()) {
             val sprite = iterator.next()
-            if (!sprite!!.isVisible) {
+            if (!sprite.isVisible) {
                 iterator.remove()
                 sprite.show()
-                if (sprite is Bullet) {
-                    bulletPool.add(sprite)
-                } else if (sprite is EnemyPlane) {
-                    enemyPlanePool.add(sprite)
-                } else if (sprite is Explosion) {
-                    explosionPool.add(sprite)
+                when (sprite) {
+                    is Bullet -> bulletPool.add(sprite)
+                    is EnemyPlane -> enemyPlanePool.add(sprite)
+                    is Explosion -> explosionPool.add(sprite)
                 }
             }
         }
@@ -155,8 +153,8 @@ object SpriteManager {
 
     fun cleanUp() {
         //隐藏战机、子弹、爆炸
-        for (s in sprites) {
-            s!!.hide()
+        for (sprite in sprites) {
+            sprite.hide()
         }
         sprites.clear()
         spritesToBeAdded.clear()
