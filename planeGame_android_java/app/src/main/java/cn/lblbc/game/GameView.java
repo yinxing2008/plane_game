@@ -9,6 +9,7 @@ package cn.lblbc.game;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,6 +24,7 @@ public final class GameView extends View {
     private Sprite myPlane;
     private final SpriteManager spriteManager;
     private final GameOverView gameOverView;
+    private TextPaint textPaint;
     private final float density = getResources().getDisplayMetrics().density;//屏幕密度
     public static final int STATUS_GAME_NOT_STARTED = 0;//游戏未开始
     public static final int STATUS_GAME_STARTED = 1;//游戏开始
@@ -40,6 +42,27 @@ public final class GameView extends View {
         spriteManager = SpriteManager.getInstance();
         gameOverView = new GameOverView(density);
         init();
+    }
+
+    private void init() {
+        frame = 0;//重置frame数量
+        score = 0; //重置得分
+        initTextPaint();
+        spriteManager.cleanUp();
+        spriteManager.init(mContext);
+        spriteManager.addMyPlane();//添加我方战机
+        myPlane = spriteManager.getMyPlane();
+        status = STATUS_GAME_STARTED;  //将游戏设置为开始状态
+        postInvalidate();
+    }
+
+    private void initTextPaint() {
+        //设置textPaint，设置为抗锯齿，且是粗体
+        textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG | Paint.FAKE_BOLD_TEXT_FLAG);
+        textPaint.setColor(-0x1000000);
+        float fontSize = 30F;
+        fontSize *= density;
+        textPaint.setTextSize(fontSize);
     }
 
     @Override
@@ -95,6 +118,9 @@ public final class GameView extends View {
         //碰撞检测
         checkCollision();
 
+        //绘制主界面得分
+        drawScore(canvas);
+
         //如果我方战机被击中，游戏结束
         if (!myPlane.isVisible()) {
             status = STATUS_GAME_OVER;
@@ -119,8 +145,7 @@ public final class GameView extends View {
                 if (enemyPlane.isCollidePointWithOther(bullet)) {
                     bullet.hide();
                     enemyPlane.hide();
-                    int value = 100; //打一架敌机得分100
-                    addScore(value);
+                    addScore(1);//打一架敌机得1分
                     break;
                 }
             }
@@ -145,20 +170,9 @@ public final class GameView extends View {
         score += value;
     }
 
-    //获取处于活动状态的子弹
-    public List<Sprite> getAliveBullets() {
-        return spriteManager.getVisibleBullets();
-    }
-
-    private void init() {
-        frame = 0;//重置frame数量
-        score = 0; //重置得分
-        spriteManager.cleanUp();
-        spriteManager.init(mContext);
-        spriteManager.addMyPlane();//添加我方战机
-        myPlane = spriteManager.getMyPlane();
-        status = STATUS_GAME_STARTED;  //将游戏设置为开始状态
-        postInvalidate();
+    //绘制主界面得分
+    private void drawScore(Canvas canvas) {
+        canvas.drawText("得分: " + score, 30F, 90F, textPaint);
     }
 
     public float getDensity() {

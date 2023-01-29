@@ -9,6 +9,7 @@ package cn.lblbc.game
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -19,6 +20,7 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
     private lateinit var myPlane: Sprite
     private val gameOverView: GameOverView
     val density = resources.displayMetrics.density //屏幕密度
+    private lateinit var textPaint: Paint
     private val STATUS_GAME_NOT_STARTED = 0 //游戏未开始
     private val STATUS_GAME_STARTED = 1 //游戏开始
     private val STATUS_GAME_OVER = 2 //游戏结束
@@ -84,6 +86,9 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
         //碰撞检测
         checkCollision()
 
+        //绘制主界面得分
+        drawScore(canvas)
+
         //如果我方战机被击中，游戏结束
         if (!myPlane.isVisible) {
             status = STATUS_GAME_OVER
@@ -106,8 +111,7 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
                 if (enemyPlane.isCollidePointWithOther(bullet)) {
                     bullet.hide()
                     enemyPlane.hide()
-                    val value = 100 //打一架敌机得分100
-                    addScore(value)
+                    addScore(1)//打一架敌机得1分
                     break
                 }
             }
@@ -126,24 +130,35 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
         postInvalidate()
     }
 
-    //添加得分
-    fun addScore(value: Int) {
-        score += value.toLong()
+    //绘制主界面得分
+    private fun drawScore(canvas: Canvas) {
+        canvas.drawText("得分: $score", 30F, 90F, textPaint)
     }
 
-    //获取处于活动状态的子弹
-    val aliveBullets: List<Sprite?>?
-        get() = SpriteManager.visibleBullets
+    //添加得分
+    private fun addScore(value: Int) {
+        score += value.toLong()
+    }
 
     private fun init() {
         frame = 0 //重置frame数量
         score = 0 //重置得分
+        initTextPaint()
         SpriteManager.cleanUp()
         SpriteManager.init(mContext)
         SpriteManager.addMyPlane() //添加我方战机
         myPlane = SpriteManager.myPlane
         status = STATUS_GAME_STARTED //将游戏设置为开始状态
         postInvalidate()
+    }
+
+    private fun initTextPaint() {
+        //设置textPaint，设置为抗锯齿，且是粗体
+        textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG or Paint.FAKE_BOLD_TEXT_FLAG)
+        textPaint.color = -0x1000000
+        var fontSize = 30F
+        fontSize *= density
+        textPaint.textSize = fontSize
     }
 
 }

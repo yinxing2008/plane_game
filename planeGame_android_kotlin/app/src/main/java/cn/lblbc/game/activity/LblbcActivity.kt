@@ -1,8 +1,6 @@
 package cn.lblbc.game.activity
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import cn.lblbc.game.R
 
@@ -16,9 +14,5 @@ class LblbcActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lblbc)
-        findViewById<View>(R.id.button).setOnClickListener { view: View? ->
-            val intent = Intent(this@LblbcActivity, GameActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
