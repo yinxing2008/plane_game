@@ -11,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 
 import cn.lblbc.game.GameView;
+import cn.lblbc.game.SoundManager;
 import cn.lblbc.game.SpriteManager;
 
 /**

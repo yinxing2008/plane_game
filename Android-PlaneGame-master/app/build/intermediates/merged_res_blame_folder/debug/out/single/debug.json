@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_button_press.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/button_press.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_player.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/player.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_boom.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/boom.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_pause_exit.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/pause_exit.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_gamewin.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/gamewin.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_img_bg.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/img_bg.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_bullet.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/bullet.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_start2.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/start2.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_sound2.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/sound2.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_gamelost.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/gamelost.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/raw_boom.wav.flat",
+        "source": "com.pg.app-main-7:/raw/boom.wav"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/layout_main.xml.flat",
+        "source": "com.pg.app-main-7:/layout/main.xml"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_bullet2.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/bullet2.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/raw_bg1.mp3.flat",
+        "source": "com.pg.app-main-7:/raw/bg1.mp3"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/raw_enemy_shoot.mp3.flat",
+        "source": "com.pg.app-main-7:/raw/enemy_shoot.mp3"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_gamepause.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/gamepause.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_icon.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_boos_boom.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/boos_boom.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_bullet_enemy.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/bullet_enemy.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_bg3.jpg.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/bg3.jpg"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/raw_shoot.wav.flat",
+        "source": "com.pg.app-main-7:/raw/shoot.wav"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_bg.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/bg.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_enemy_new.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/enemy_new.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_enemy_duck.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/enemy_duck.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_pause_continue.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/pause_continue.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_pause_bg.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/pause_bg.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_menu.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/menu.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-ldpi_icon.png.flat",
+        "source": "com.pg.app-main-7:/drawable-ldpi/icon.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_enemy_boss.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/enemy_boss.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_background.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/background.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_start1.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/start1.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_pause_back.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/pause_back.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_enemy_pig.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/enemy_pig.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_enemy_fly2.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/enemy_fly2.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_hp.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/hp.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_enemy_duck2.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/enemy_duck2.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_enemy_fly.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/enemy_fly.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-hdpi_icon.png.flat",
+        "source": "com.pg.app-main-7:/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/raw_bg2.mp3.flat",
+        "source": "com.pg.app-main-7:/raw/bg2.mp3"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_m2.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/m2.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_boosbullet.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/boosbullet.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_sound.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/sound.png"
+    },
+    {
+        "merged": "com.pg.app-merged_res-5:/drawable-mdpi_button.png.flat",
+        "source": "com.pg.app-main-7:/drawable-mdpi/button.png"
+    }
+]

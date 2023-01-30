@@ -35,10 +35,13 @@ public class SpriteManager {
     }
 
     public void init(Context context) {
+        cleanUp();
         BitMapReader bitMapReader = BitMapReader.getInstance();
         bitMapReader.init(context);
+
         //初始化我方战机
         myPlane = new MyPlane(bitMapReader.getMyPlaneBitmap());
+        addMyPlane();//添加我方战机
 
         //初始化30架敌机
         for (int i = 0; i < 30; i++) {

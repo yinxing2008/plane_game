@@ -8,6 +8,7 @@ package cn.lblbc.game.sprite;
 
 import android.graphics.Bitmap;
 
+import cn.lblbc.game.SoundManager;
 import cn.lblbc.game.SpriteManager;
 
 /**
@@ -28,6 +29,7 @@ public class EnemyPlane extends AutoSprite {
     private void explode() {
         float centerX = getX() + getWidth() / 2;
         float centerY = getY() + getHeight() / 2;
+        SoundManager.getInstance().playBomb();
         SpriteManager.getInstance().addExplosion(centerX, centerY);
     }
 }

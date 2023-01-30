@@ -23,6 +23,7 @@ public final class GameView extends View {
     private final Paint mPaint;
     private Sprite myPlane;
     private final SpriteManager spriteManager;
+    private final SoundManager soundManager = SoundManager.getInstance();
     private final GameOverView gameOverView;
     private TextPaint textPaint;
     private final float density = getResources().getDisplayMetrics().density;//屏幕密度
@@ -48,12 +49,12 @@ public final class GameView extends View {
         frame = 0;//重置frame数量
         score = 0; //重置得分
         initTextPaint();
-        spriteManager.cleanUp();
+        soundManager.init(mContext);
         spriteManager.init(mContext);
-        spriteManager.addMyPlane();//添加我方战机
         myPlane = spriteManager.getMyPlane();
         status = STATUS_GAME_STARTED;  //将游戏设置为开始状态
         postInvalidate();
+//        soundManager.playBackgroundSound();
     }
 
     private void initTextPaint() {
