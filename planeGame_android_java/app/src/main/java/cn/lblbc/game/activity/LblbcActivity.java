@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import cn.lblbc.game.R;
-import cn.lblbc.game.SoundManager;
 
 /**
  * 厦门大学计算机专业 | 前华为工程师
@@ -19,6 +18,5 @@ public class LblbcActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lblbc);
-
     }
 }
