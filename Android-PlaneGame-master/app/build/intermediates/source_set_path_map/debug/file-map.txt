@@ -1,8 +1,0 @@
-com.pg.app-pngs-0 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/build/generated/res/pngs/debug
-com.pg.app-resValues-1 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/build/generated/res/resValues/debug
-com.pg.app-rs-2 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/build/generated/res/rs/debug
-com.pg.app-mergeDebugResources-3 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
-com.pg.app-mergeDebugResources-4 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
-com.pg.app-merged_res-5 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/build/intermediates/merged_res/debug
-com.pg.app-debug-6 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/src/debug/res
-com.pg.app-main-7 /Users/jerry/projects/mine/gitee/demos/plane_game/Android-PlaneGame-master/app/src/main/res
