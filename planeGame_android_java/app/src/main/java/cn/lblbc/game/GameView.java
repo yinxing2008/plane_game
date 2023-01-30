@@ -54,7 +54,6 @@ public final class GameView extends View {
         myPlane = spriteManager.getMyPlane();
         status = STATUS_GAME_STARTED;  //将游戏设置为开始状态
         postInvalidate();
-//        soundManager.playBackgroundSound();
     }
 
     private void initTextPaint() {
