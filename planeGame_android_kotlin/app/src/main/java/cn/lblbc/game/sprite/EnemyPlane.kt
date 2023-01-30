@@ -7,6 +7,7 @@
 package cn.lblbc.game.sprite
 
 import android.graphics.Bitmap
+import cn.lblbc.game.SoundManager
 import cn.lblbc.game.SpriteManager
 
 /**
@@ -22,6 +23,7 @@ class EnemyPlane(bitmap: Bitmap) : AutoSprite(bitmap) {
     private fun explode() {
         val centerX = x + width / 2
         val centerY = y + height / 2
+        SoundManager.getInstance().playBomb()
         SpriteManager.addExplosion(centerX, centerY)
     }
 }

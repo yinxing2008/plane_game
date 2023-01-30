@@ -19,6 +19,7 @@ object SpriteManager {
         private set
 
     fun init(context: Context) {
+        cleanUp()
         BitMapReader.init(context)
         //初始化我方战机
         myPlane = MyPlane(BitMapReader.myPlaneBitmap)

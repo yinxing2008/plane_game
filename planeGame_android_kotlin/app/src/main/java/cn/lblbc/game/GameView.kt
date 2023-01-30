@@ -18,6 +18,7 @@ import cn.lblbc.game.sprite.Sprite
 class GameView(private val mContext: Context, attributeSet: AttributeSet?) : View(mContext, attributeSet) {
     private val mPaint = Paint()
     private lateinit var myPlane: Sprite
+    private val soundManager = SoundManager.getInstance()
     private val gameOverView: GameOverView
     val density = resources.displayMetrics.density //屏幕密度
     private lateinit var textPaint: Paint
@@ -144,7 +145,7 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
         frame = 0 //重置frame数量
         score = 0 //重置得分
         initTextPaint()
-        SpriteManager.cleanUp()
+        soundManager.init(mContext)
         SpriteManager.init(mContext)
         SpriteManager.addMyPlane() //添加我方战机
         myPlane = SpriteManager.myPlane
