@@ -17,7 +17,7 @@ import cn.lblbc.game.GameView;
  * 自动移动的Sprite，子弹和敌机属于这一类
  */
 public class AutoSprite extends Sprite {
-    private float speed = 2;//每帧移动的像素数,正数表示向下运动，负数向上运动
+    private float speed = 2;
 
     public AutoSprite(Bitmap bitmap) {
         super(bitmap);

@@ -12,9 +12,9 @@ import android.graphics.Rect;
 import android.text.TextPaint;
 
 public class GameOverView {
-    private float textFontSize = 20;//用于在Game Over的时候绘制Dialog中的文本
-    private float borderSize = 2;//Game Over的Dialog的边框
-    private Rect continueRect = new Rect();//"继续"、"重新开始"按钮的Rect
+    private float textFontSize = 20;
+    private float borderSize = 2;
+    private Rect continueRect = new Rect();
 
     public GameOverView(float density) {
         textFontSize *= density;
@@ -57,7 +57,6 @@ public class GameOverView {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(0xFF515151);
         mPaint.setStrokeWidth(borderSize);
-        //paint.setStrokeCap(Paint.Cap.ROUND);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         canvas.drawRect(rect1, mPaint);
         //绘制文本"大战成绩"
@@ -100,6 +99,4 @@ public class GameOverView {
     public boolean isRestartButtonClicked(float x, float y) {
         return continueRect.contains((int) x, (int) y);
     }
-
-
 }

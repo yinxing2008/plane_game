@@ -26,13 +26,13 @@ public final class GameView extends View {
     private final SoundManager soundManager = SoundManager.getInstance();
     private final GameOverView gameOverView;
     private TextPaint textPaint;
-    private final float density = getResources().getDisplayMetrics().density;//屏幕密度
+    private final float density = getResources().getDisplayMetrics().density;
     public static final int STATUS_GAME_NOT_STARTED = 0;//游戏未开始
     public static final int STATUS_GAME_STARTED = 1;//游戏开始
     public static final int STATUS_GAME_OVER = 2;//游戏结束
     private int status = STATUS_GAME_NOT_STARTED;
-    private float touchX = -1;//触点的x坐标
-    private float touchY = -1;//触点的y坐标
+    private float touchX = -1;
+    private float touchY = -1;
     private long frame = 0;//总共绘制的帧数
     private long score = 0;//总得分
 
@@ -46,8 +46,8 @@ public final class GameView extends View {
     }
 
     private void init() {
-        frame = 0;//重置frame数量
-        score = 0; //重置得分
+        frame = 0;
+        score = 0;
         initTextPaint();
         soundManager.init(mContext);
         spriteManager.init(mContext);
