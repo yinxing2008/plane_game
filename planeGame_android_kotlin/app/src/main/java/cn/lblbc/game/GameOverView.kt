@@ -13,9 +13,9 @@ import android.graphics.Rect
 import android.text.TextPaint
 
 class GameOverView(density: Float) {
-    private var textFontSize = 20f //用于在Game Over的时候绘制Dialog中的文本
-    private var borderSize = 2f //Game Over的Dialog的边框
-    private var continueRect = Rect() //"继续"、"重新开始"按钮的Rect
+    private var textFontSize = 20f
+    private var borderSize = 2f
+    private var continueRect = Rect()
 
     init {
         textFontSize *= density

@@ -21,8 +21,10 @@ object SpriteManager {
     fun init(context: Context) {
         cleanUp()
         BitMapReader.init(context)
+
         //初始化我方战机
         myPlane = MyPlane(BitMapReader.myPlaneBitmap)
+        addMyPlane() //添加我方战机
 
         //初始化30架敌机
         for (i in 0..29) {

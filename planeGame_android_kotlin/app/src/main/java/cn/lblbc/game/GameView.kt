@@ -26,10 +26,10 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
     private val STATUS_GAME_STARTED = 1 //游戏开始
     private val STATUS_GAME_OVER = 2 //游戏结束
     private var status = STATUS_GAME_NOT_STARTED
-    private var touchX = -1f //触点的x坐标
-    private var touchY = -1f //触点的y坐标
-    private var frame: Long = 0 //总共绘制的帧数
-    private var score: Long = 0 //总得分
+    private var touchX = -1f
+    private var touchY = -1f
+    private var frame: Long = 0
+    private var score: Long = 0
 
     init {
         gameOverView = GameOverView(density)
@@ -54,7 +54,7 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
                 myPlane.moveToByCenter(touchX, touchY)
             }
         } else if (status == STATUS_GAME_OVER) {
-            if (gameOverView.isRestartButtonClicked(touchX, touchY)) { //点击“重新开始”按钮
+            if (gameOverView.isRestartButtonClicked(touchX, touchY)) {
                 init()
             }
         }
@@ -142,12 +142,11 @@ class GameView(private val mContext: Context, attributeSet: AttributeSet?) : Vie
     }
 
     private fun init() {
-        frame = 0 //重置frame数量
-        score = 0 //重置得分
+        frame = 0
+        score = 0
         initTextPaint()
         soundManager.init(mContext)
         SpriteManager.init(mContext)
-        SpriteManager.addMyPlane() //添加我方战机
         myPlane = SpriteManager.myPlane
         status = STATUS_GAME_STARTED //将游戏设置为开始状态
         postInvalidate()

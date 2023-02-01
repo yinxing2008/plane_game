@@ -16,7 +16,7 @@ import cn.lblbc.game.GameView
  * 自动移动的Sprite，子弹和敌机属于这一类
  */
 open class AutoSprite(bitmap: Bitmap) : Sprite(bitmap) {
-    private var speed = 2f //每帧移动的像素数,正数表示向下运动，负数向上运动
+    private var speed = 2f
     fun setSpeed(speed: Float) {
         this.speed = speed
     }
