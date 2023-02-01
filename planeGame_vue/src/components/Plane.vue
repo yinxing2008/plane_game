@@ -9,7 +9,6 @@ import { ref, reactive, onMounted, onUnmounted } from 'vue'
 import config from '../config'
 let _emit
 export default {
-  props: ['bloodVolume'],
   setup(props, { emit }) {
     _emit = emit
     return {
@@ -26,7 +25,6 @@ export function usePlane(onAttack) {
     width: config.plane.width,
     height: config.plane.height,
     speed: config.plane.speed,
-    bloodVolume: config.plane.bloodVolume
   })
   const initPlanePositioned = ref(true)
   // 初始化飞机位置 -> 底部飞出
@@ -63,11 +61,8 @@ export function usePlane(onAttack) {
     _emit('changePage', 'gameOverPage')
   }
   // 飞机受到攻击
-  const hurtPlane = (hurtVal) => {
-    planeInfo.bloodVolume -= hurtVal
-    if (planeInfo.bloodVolume <= 0) {
+  const hurtPlane = () => {
       gameOver()
-    }
   }
   const shootTimer = ref()
   const shoot = () => {

@@ -10,7 +10,6 @@ import { game } from "../game";
 import config from "../config";
 let _emit;
 export default {
-  props: ["bloodVolume"],
   setup(props, { emit }) {
     _emit = emit;
     return {
@@ -30,11 +29,9 @@ export function useEnemy() {
     x = x < 0 ? 0 : x;
     const width = config.enemy.width;
     const height = config.enemy.height;
-    const bloodVolume = config.enemy.bloodVolume;
     return {
       x,
       y: 0,
-      bloodVolume,
       width,
       height
     };
@@ -53,15 +50,10 @@ export function useEnemy() {
     });
   };
   // 敌机受到攻击
-  const hurtEnemy = (index, hurtVal) => {
+  const hurtEnemy = (index) => {
     if (!enemys[index]) return;
-    if (enemys[index].bloodVolume > 0) {
-      enemys[index].bloodVolume -= hurtVal;
-      _emit("addScore", Math.floor(hurtVal / 50));
-    }
-    if (enemys[index].bloodVolume <= 0) {
-      removeEnemy(index);
-    }
+    _emit("addScore", 1);
+    removeEnemy(index);
   };
   // 敌机删除
   const removeEnemy = index => {

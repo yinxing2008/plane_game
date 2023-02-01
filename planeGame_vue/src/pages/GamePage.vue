@@ -5,7 +5,6 @@
       @changePage="changePage"
       :x="planeInfo.x"
       :y="planeInfo.y"
-      :bloodVolume="planeInfo.bloodVolume"
     />
     <PlaneBullet v-for="(bullet,index) in planeBullets" :key="index" :x="bullet.x" :y="bullet.y" />
     <Enemy
@@ -14,7 +13,6 @@
       :x="enemy.x"
       :y="enemy.y"
       @addScore="addScore"
-      :bloodVolume="enemy.bloodVolume"
     ></Enemy>
     <text :text="`得分：${score}`" :x="10" :y="10"></text>
   </container>

@@ -15,8 +15,6 @@ export default {
     startX: 280,
     startY: 800,
     speed: 16,
-    hurt: 50,
-    bloodVolume: 100,
     bullet: {
       width: 30,
       height: 51,
@@ -28,7 +26,5 @@ export default {
     width: 89,
     height: 60,
     speed: 4,
-    hurt: 50,
-    bloodVolume: 100
   }
 }
