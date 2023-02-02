@@ -1,6 +1,5 @@
 import { onMounted, onUnmounted } from "vue";
 import { game } from "../game";
-import { hitObjectTest } from "../utils";
 import config from "../config";
 export function fighting({ enemys, hurtEnemy, planeInfo, planeBullets, removePlaneBullet, hurtPlane }) {
   // 敌机与飞机碰撞检测
@@ -32,4 +31,14 @@ export function fighting({ enemys, hurtEnemy, planeInfo, planeBullets, removePla
     game.ticker.remove(enemyPlaneCollision);
     game.ticker.remove(enemyPlaneBulletCollision);
   });
+}
+
+// 碰撞检测
+export function hitObjectTest(objA, objB) {
+  return (
+    objA.x + objA.width >= objB.x &&
+    objB.x + objB.width >= objA.x &&
+    objA.y + objA.height >= objB.y &&
+    objB.y + objB.height >= objA.y
+  );
 }
