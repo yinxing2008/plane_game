@@ -10,7 +10,6 @@
 		3B0C523021DF2F1B00A758F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0C522F21DF2F1B00A758F3 /* AppDelegate.swift */; };
 		3B0C523221DF2F1B00A758F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0C523121DF2F1B00A758F3 /* ViewController.swift */; };
 		3B0C523521DF2F1B00A758F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0C523321DF2F1B00A758F3 /* Main.storyboard */; };
-		3B0C523821DF2F1B00A758F3 /* GameSon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B0C523621DF2F1B00A758F3 /* GameSon.xcdatamodeld */; };
 		3B0C523A21DF2F1B00A758F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0C523921DF2F1B00A758F3 /* Assets.xcassets */; };
 		3B0C523D21DF2F1B00A758F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0C523B21DF2F1B00A758F3 /* LaunchScreen.storyboard */; };
 		3BA8D7EA21E8630800353DB2 /* images.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3BA8D7E921E8630800353DB2 /* images.atlas */; };
@@ -23,7 +22,6 @@
 		3B0C522F21DF2F1B00A758F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B0C523121DF2F1B00A758F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B0C523421DF2F1B00A758F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B0C523721DF2F1B00A758F3 /* GameSon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameSon.xcdatamodel; sourceTree = "<group>"; };
 		3B0C523921DF2F1B00A758F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B0C523C21DF2F1B00A758F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B0C523E21DF2F1B00A758F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				3B0C523921DF2F1B00A758F3 /* Assets.xcassets */,
 				3B0C523B21DF2F1B00A758F3 /* LaunchScreen.storyboard */,
 				3B0C523E21DF2F1B00A758F3 /* Info.plist */,
-				3B0C523621DF2F1B00A758F3 /* GameSon.xcdatamodeld */,
 				3BA8D7E921E8630800353DB2 /* images.atlas */,
 			);
 			path = lblbc;
@@ -150,7 +147,6 @@
 			files = (
 				C49A6227298D4D5B0031F8D5 /* GameScene.swift in Sources */,
 				3B0C523221DF2F1B00A758F3 /* ViewController.swift in Sources */,
-				3B0C523821DF2F1B00A758F3 /* GameSon.xcdatamodeld in Sources */,
 				3BA8D7EC21E8A2B200353DB2 /* GameOverScene.swift in Sources */,
 				3B0C523021DF2F1B00A758F3 /* AppDelegate.swift in Sources */,
 			);
@@ -350,19 +346,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3B0C523621DF2F1B00A758F3 /* GameSon.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3B0C523721DF2F1B00A758F3 /* GameSon.xcdatamodel */,
-			);
-			currentVersion = 3B0C523721DF2F1B00A758F3 /* GameSon.xcdatamodel */;
-			path = GameSon.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3B0C522421DF2F1B00A758F3 /* Project object */;
 }
