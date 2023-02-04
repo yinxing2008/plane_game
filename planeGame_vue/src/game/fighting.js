@@ -5,7 +5,7 @@ export function fighting({ enemys, hurtEnemy, planeInfo, planeBullets, removePla
   // 敌机与飞机碰撞检测
   const enemyPlaneCollision = () => {
     enemys.forEach((enemy, eIndex) => {
-      if (hitObjectTest(enemy, planeInfo)) {
+      if (isCollision(enemy, planeInfo)) {
         hurtEnemy(eIndex, config.plane.hurt);
         hurtPlane(config.enemy.hurt);
       }
@@ -16,7 +16,7 @@ export function fighting({ enemys, hurtEnemy, planeInfo, planeBullets, removePla
   const enemyPlaneBulletCollision = () => {
     enemys.forEach((enemy, eIndex) => {
       planeBullets.forEach((bullet, bIndex) => {
-        if (hitObjectTest(enemy, bullet)) {
+        if (isCollision(enemy, bullet)) {
           hurtEnemy(eIndex, config.plane.hurt);
           removePlaneBullet(bIndex);
         }
@@ -34,7 +34,7 @@ export function fighting({ enemys, hurtEnemy, planeInfo, planeBullets, removePla
 }
 
 // 碰撞检测
-export function hitObjectTest(objA, objB) {
+function isCollision(objA, objB) {
   return (
     objA.x + objA.width >= objB.x &&
     objB.x + objB.width >= objA.x &&
