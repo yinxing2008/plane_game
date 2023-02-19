@@ -7,8 +7,8 @@
 
 <script>
 import { ref } from "vue";
-import GamePage from "./pages/GamePage.vue";
-import GameOverPage from "./pages/GameOverPage.vue";
+import GamePage from "./views/GamePage.vue";
+import GameOverPage from "./views/GameOverPage.vue";
 export default {
   components: {
     GamePage,
