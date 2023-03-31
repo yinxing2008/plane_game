@@ -224,12 +224,7 @@ class Game {
             Container(
               height: 70,
               alignment: Alignment.center,
-              child: OutlineButton(
-                padding: EdgeInsets.symmetric(horizontal: 40),
-                borderSide: BorderSide(
-                  color: Colors.black54,
-                  width: 2,
-                ),
+              child: ElevatedButton(
                 onPressed: () {
                   if (isGameOver) {
                     startGame();
