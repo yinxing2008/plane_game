@@ -28,12 +28,12 @@
 包含：Java | 安卓 | 前端 | Flutter | iOS | 小程序 | 鸿蒙  
 公众号：蓝不蓝编程  
 
-## Project setup
+## 编译
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
 ```
 export  NODE_OPTIONS=--openssl-legacy-provider
 yarn serve
