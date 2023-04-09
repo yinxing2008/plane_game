@@ -3,10 +3,10 @@ Plane game for programming starters, including Android,iOS,Huawei HarmonyOS,Flut
 
 
 # Preview
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d96d543bb6a84694becd32013409f43e~tplv-k3u1fbpfcp-zoom-1.image)
+![](https://img-blog.csdnimg.cn/06688e44868f4c96b6383abcb98b8d83.png)
 
 # Open Source
-[https://gitee.com/lblbc/plane_game](https://gitee.com/lblbc/plane_game)
+[https://gitee.com/lblbc/appstore](https://gitee.com/lblbc/appstore)
 
 # About Me
 Graduated from China Xiamen University  

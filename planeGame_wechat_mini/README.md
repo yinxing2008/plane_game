@@ -1,25 +1,17 @@
-## quickstart
+# Introduction
+Plane game for programming starters, including Android,iOS,Huawei HarmonyOS,Flutter,Vue,uni-app,Java,Python,Go,PHP,NodeJS
 
-## 源码目录介绍
-```
-./js
-├── base                                   // 定义游戏开发基础类
-│   ├── animatoin.js                       // 帧动画的简易实现
-│   ├── pool.js                            // 对象池的简易实现
-│   └── sprite.js                          // 游戏基本元素精灵类
-├── libs
-│   ├── symbol.js                          // ES6 Symbol简易兼容
-│   └── weapp-adapter.js                   // 小游戏适配器
-├── npc
-│   └── enemy.js                           // 敌机类
-├── player
-│   ├── bullet.js                          // 子弹类
-│   └── index.js                           // 玩家类
-├── runtime
-│   ├── background.js                      // 背景类
-│   ├── gameinfo.js                        // 用于展示分数和结算界面
-│   └── music.js                           // 全局音效管理器
-├── databus.js                             // 管控游戏状态
-└── main.js                                // 游戏入口主函数
 
-```
+# Preview
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88f5ab97c8d4480f917b14ce06bdfe54~tplv-k3u1fbpfcp-zoom-1.image)
+# Open Source
+[https://gitee.com/lblbc/plane_game](https://gitee.com/lblbc/plane_game)
+
+
+# About Me
+Graduated from China Xiamen University  
+Ever worked for Huawei as software developer  
+focus on programming learning. http://lblbc.cn/blog  
+Including：Android(Java、Kotlin)、iOS(SwiftUI)、Flutter(Dart)、Window Desktop(C#)、Front End(WeChat mini-program、uni-app、vue)、Back End（Java、Kotlin、NodeJS、Python、PHP、Go、C、C++）、HarmonyOS(Huawei)  
+Follow me on China wechat：蓝不蓝编程  
+Plane game for programming starters, including Android,iOS,Huawei HarmonyOS,Flutter,Vue,uni-app,Java,Python,Go,PHP,NodeJS
