@@ -19,8 +19,7 @@
 ![](https://upload-images.jianshu.io/upload_images/6169789-f70e43b477a01eb0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 开源地址
-[https://gitee.com/lblbc/random-password](https://gitee.com/lblbc/random-password)
-
+[https://gitee.com/lblbc/plane_game](https://gitee.com/lblbc/plane_game)
 
 # 关于
 厦门大学计算机专业|华为八年高级工程师     
